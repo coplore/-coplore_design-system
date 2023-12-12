@@ -1,0 +1,23 @@
+:root {
+	--#{$prefix}white: #{$white};
+	--#{$prefix}black: #{$black};
+
+	@include defineColorVariable($reds);
+	@include defineColorVariable($pinks);
+	@include defineColorVariable($purples);
+	@include defineColorVariable($deep-purples);
+	@include defineColorVariable($indigos);
+	@include defineColorVariable($blues);
+	@include defineColorVariable($light-blues);
+	@include defineColorVariable($cyans);
+	@include defineColorVariable($teals);
+	@include defineColorVariable($greens);
+	@include defineColorVariable($light-greens);
+	@include defineColorVariable($limes);
+	@include defineColorVariable($yellows);
+	@include defineColorVariable($ambers);
+	@include defineColorVariable($oranges);
+	@include defineColorVariable($deep-oranges);
+	@include defineColorVariable($browns);
+	@include defineColorVariable($blue-greys);
+}
