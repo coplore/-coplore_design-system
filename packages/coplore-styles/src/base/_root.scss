@@ -1,23 +1,41 @@
-:root {
+/* 색상 맵을 기반으로 CSS 변수을 생성하는 mixin */
+@mixin defineVariable($variableMap) {
+	@each $key, $value in $variableMap {
+		--#{$prefix}#{$key}: #{$value};
+	}
+}
+
+:root,
+[data-bs-theme=light] {
+	/* ====== breakpoint variable ====== */
+	@include defineVariable($grid-breakpoints);
+
+	/* ====== color variable ====== */
 	--#{$prefix}white: #{$white};
 	--#{$prefix}black: #{$black};
+	@include defineVariable($reds);
+	@include defineVariable($pinks);
+	@include defineVariable($purples);
+	@include defineVariable($deep-purples);
+	@include defineVariable($indigos);
+	@include defineVariable($blues);
+	@include defineVariable($light-blues);
+	@include defineVariable($cyans);
+	@include defineVariable($teals);
+	@include defineVariable($greens);
+	@include defineVariable($light-greens);
+	@include defineVariable($limes);
+	@include defineVariable($yellows);
+	@include defineVariable($ambers);
+	@include defineVariable($oranges);
+	@include defineVariable($deep-oranges);
+	@include defineVariable($browns);
+	@include defineVariable($blue-greys);
 
-	@include defineColorVariable($reds);
-	@include defineColorVariable($pinks);
-	@include defineColorVariable($purples);
-	@include defineColorVariable($deep-purples);
-	@include defineColorVariable($indigos);
-	@include defineColorVariable($blues);
-	@include defineColorVariable($light-blues);
-	@include defineColorVariable($cyans);
-	@include defineColorVariable($teals);
-	@include defineColorVariable($greens);
-	@include defineColorVariable($light-greens);
-	@include defineColorVariable($limes);
-	@include defineColorVariable($yellows);
-	@include defineColorVariable($ambers);
-	@include defineColorVariable($oranges);
-	@include defineColorVariable($deep-oranges);
-	@include defineColorVariable($browns);
-	@include defineColorVariable($blue-greys);
+	/* ====== shadow variable ====== */
+
+	/* ====== spacing variable ====== */
+	@include defineVariable($spacings);
+
+	/* ====== typography variable ====== */
 }

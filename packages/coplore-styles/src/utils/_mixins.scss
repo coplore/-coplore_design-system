@@ -1,6 +1,0 @@
-/* 색상 맵을 기반으로 CSS 변수을 생성하는 mixin */
-@mixin defineColorVariable($colorMap) {
-	@each $key, $value in $colorMap {
-		--#{$prefix}#{$key}: #{$value};
-	}
-}
