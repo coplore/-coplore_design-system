@@ -1,0 +1,62 @@
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 992px;
+$grid-breakpoint-xl: 1200px;
+$grid-breakpoint-xxl: 1400px;
+
+$grid-breakpoints: (
+  grid-breakpoint-xs: $grid-breakpoint-xs,
+  grid-breakpoint-sm: $grid-breakpoint-sm,
+  grid-breakpoint-md: $grid-breakpoint-md,
+  grid-breakpoint-lg: $grid-breakpoint-lg,
+  grid-breakpoint-xl: $grid-breakpoint-xl,
+  grid-breakpoint-xxl: $grid-breakpoint-xx,
+);
+
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $max: map-get($breakpoints, $name);
+  @return if($max and $max > 0, $max, null);
+}
+
+/**
+ * 정의된 breakpoint를 이용해 min-width(최소 너비) 미디어 쿼리 생성
+ *
+ * - 사용 방법: @include media-breakpoint-up(md) { ... }
+ * - 컴파일 후: @media (min-width: 768px) { ... }
+ */
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  
+	
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/**
+ * 정의된 breakpoint를 이용해 max-width(최대 너비) 미디어 쿼리 생성
+ *
+ * - 사용 방법: @include media-breakpoint-down(md) { ... }
+ * - 컴파일 후: @media (max-width: 768px) { ... }
+ */
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
