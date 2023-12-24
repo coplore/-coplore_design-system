@@ -1,37 +1,40 @@
 {
-  "name": "@coplore/design-system",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "description": "🎨 Coplore Design System",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/coplore/coplore_design-system.git"
-  },
-  "contributors": [
-    {
-      "name": "chan9yu",
-      "email": "wry5533@gmail.com"
-    }
-  ],
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "coplore",
-    "react",
-    "scss",
-    "design-system"
-  ],
-  "scripts": {},
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.14.0",
-    "@typescript-eslint/parser": "^6.14.0",
-    "eslint": "^8.55.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "prettier": "^3.1.1",
-    "typescript": "^5.3.3"
-  }
+	"name": "@coplore/design-system",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"description": "🎨 Coplore Design System",
+	"license": "MIT",
+	"lint-staged": {
+		"**/*.{ts,tsx}": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
+	"scripts": {
+		"commit": "pnpm git-cz",
+		"prepare": "husky install",
+		"husky:permission": "chmod +x .husky/*"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^18.4.3",
+		"@commitlint/config-conventional": "^18.4.3",
+		"@typescript-eslint/eslint-plugin": "^6.14.0",
+		"@typescript-eslint/parser": "^6.14.0",
+		"commitizen": "^4.3.0",
+		"conventional-changelog-conventionalcommits": "^7.0.2",
+		"cz-customizable": "^7.0.0",
+		"eslint": "^8.55.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.0.1",
+		"husky": "^8.0.3",
+		"lint-staged": "^15.2.0",
+		"prettier": "^3.1.1",
+		"typescript": "^5.3.3"
+	}
 }
