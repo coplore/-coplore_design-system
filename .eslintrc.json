@@ -15,17 +15,12 @@
     "eslint:recommended", 
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "plugin:storybook/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "plugins": [
-    "react",
-    "react-hooks",
     "jsx-a11y",
     "@typescript-eslint"
   ],
-  "rules": {
-    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
-  }
+  "rules": {}
 }
