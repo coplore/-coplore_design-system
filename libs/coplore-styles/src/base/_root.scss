@@ -6,7 +6,7 @@
 }
 
 :root,
-[data-bs-theme=light] {
+[data-theme='light'] {
 	/* ====== breakpoint variable ====== */
 	@include defineVariable($grid-breakpoints);
 

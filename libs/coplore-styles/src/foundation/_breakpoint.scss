@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 $grid-breakpoint-xs: 0;
 $grid-breakpoint-sm: 576px;
 $grid-breakpoint-md: 768px;
@@ -6,22 +8,22 @@ $grid-breakpoint-xl: 1200px;
 $grid-breakpoint-xxl: 1400px;
 
 $grid-breakpoints: (
-  grid-breakpoint-xs: $grid-breakpoint-xs,
-  grid-breakpoint-sm: $grid-breakpoint-sm,
-  grid-breakpoint-md: $grid-breakpoint-md,
-  grid-breakpoint-lg: $grid-breakpoint-lg,
-  grid-breakpoint-xl: $grid-breakpoint-xl,
-  grid-breakpoint-xxl: $grid-breakpoint-xx,
+	grid-breakpoint-xs: $grid-breakpoint-xs,
+	grid-breakpoint-sm: $grid-breakpoint-sm,
+	grid-breakpoint-md: $grid-breakpoint-md,
+	grid-breakpoint-lg: $grid-breakpoint-lg,
+	grid-breakpoint-xl: $grid-breakpoint-xl,
+	grid-breakpoint-xxl: $grid-breakpoint-xxl
 );
 
 @function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
-  $min: map-get($breakpoints, $name);
-  @return if($min != 0, $min, null);
+	$min: map.get($breakpoints, $name);
+	@return if($min != 0, $min, null);
 }
 
 @function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
-  $max: map-get($breakpoints, $name);
-  @return if($max and $max > 0, $max, null);
+	$max: map.get($breakpoints, $name);
+	@return if($max and $max > 0, $max, null);
 }
 
 /**
@@ -31,16 +33,15 @@ $grid-breakpoints: (
  * - 컴파일 후: @media (min-width: 768px) { ... }
  */
 @mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
-  $min: breakpoint-min($name, $breakpoints);
-  
-	
-  @if $min {
-    @media (min-width: $min) {
-      @content;
-    }
-  } @else {
-    @content;
-  }
+	$min: breakpoint-min($name, $breakpoints);
+
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
 }
 
 /**
@@ -50,13 +51,12 @@ $grid-breakpoints: (
  * - 컴파일 후: @media (max-width: 768px) { ... }
  */
 @mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
-  $max: breakpoint-max($name, $breakpoints);
-  @if $max {
-    @media (max-width: $max) {
-      @content;
-    }
-  } @else {
-    @content;
-  }
+	$max: breakpoint-max($name, $breakpoints);
+	@if $max {
+		@media (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
 }
-

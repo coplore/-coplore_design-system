@@ -1,0 +1,6 @@
+$btn-prefix: #{$prefix}btn-;
+
+button {
+	--#{$btn-prefix}background-color: var(--#{$prefix}blue-500);
+	background-color: var(--#{$btn-prefix}background-color);
+}

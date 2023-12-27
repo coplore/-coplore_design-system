@@ -4,9 +4,15 @@
 @import 'utils/functions';
 
 /* foundation */
+@import 'foundation/breakpoint';
 @import 'foundation/color';
+@import 'foundation/shadow';
+@import 'foundation/spacing';
 @import 'foundation/typography';
 
 /* base */
 @import 'base/reset';
 @import 'base/root';
+
+/* components */
+@import 'components/button';
