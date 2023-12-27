@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-prettier/recommended",
+    "stylelint-config-sass-guidelines"
+  ],
+  "rules": {
+    "annotation-no-unknown": null,
+    "color-hex-length": "long",
+    "function-no-unknown": null,
+    "function-url-quotes": null,
+    "max-nesting-depth": 4,
+    "media-query-no-invalid": null,
+    "no-empty-source": null,
+    "selector-class-pattern": null,
+    "import-notation": "string"
+  }
+}

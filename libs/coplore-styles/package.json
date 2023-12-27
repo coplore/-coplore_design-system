@@ -1,0 +1,45 @@
+{
+	"name": "@coplore/styles",
+	"version": "0.0.1",
+	"description": "🎨 Coplore Design System | styles package",
+	"license": "MIT",
+	"contributors": [
+		{
+			"name": "chan9yu",
+			"email": "wry5533@gmail.com",
+			"url": "https://github.com/chan9yu"
+		},
+		{
+			"name": "KimTeaSick",
+			"email": "notseph8556@gmail.com",
+			"url": "https://github.com/KimTeaSick"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/coplore/coplore_design-system"
+	},
+	"exports": {
+		"./global.css": "./dist/global.css"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"dev": "pnpm nodemon --watch src --exec pnpm build --dev -e scss",
+		"build": "node ./scripts/build.js",
+		"lint": "stylelint '**/*.scss'",
+		"lint:fix": "stylelint --fix **/*.scss"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.16",
+		"nodemon": "^3.0.2",
+		"postcss": "^8.4.32",
+		"sass": "^1.69.5",
+		"stylelint": "^15.11.0",
+		"stylelint-config-prettier": "^9.0.5",
+		"stylelint-config-sass-guidelines": "^10.0.0",
+		"stylelint-config-standard": "^35.0.0",
+		"stylelint-prettier": "^4.1.0"
+	}
+}
