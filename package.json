@@ -1,5 +1,6 @@
 {
 	"name": "@coplore/design-system",
+	"private": true,
 	"version": "0.0.1",
 	"description": "🎨 Coplore Design System",
 	"lint-staged": {
