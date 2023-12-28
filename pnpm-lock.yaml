@@ -27,8 +27,8 @@ importers:
         specifier: ^7.0.2
         version: 7.0.2
       cz-customizable:
-        specifier: ^7.0.0
-        version: 7.0.0
+        specifier: 6.3.0
+        version: 6.3.0
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -141,12 +141,6 @@ importers:
       rollup:
         specifier: ^4.9.1
         version: 4.9.1
-      rollup-plugin-dts:
-        specifier: ^6.1.0
-        version: 6.1.0(rollup@4.9.1)(typescript@5.3.3)
-      rollup-plugin-multi-input:
-        specifier: ^1.4.1
-        version: 1.4.1
       rollup-plugin-typescript2:
         specifier: ^0.36.0
         version: 0.36.0(rollup@4.9.1)(typescript@5.3.3)
@@ -5311,8 +5305,8 @@ packages:
       - typescript
     dev: true
 
-  /cz-customizable@7.0.0:
-    resolution: {integrity: sha512-pQKkGSm+8SY9VY/yeJqDOla1MjrGaG7WG4EYLLEV4VNctGO7WdzdGtWEr2ydKSkrpmTs7f8fmBksg/FaTrUAyw==}
+  /cz-customizable@6.3.0:
+    resolution: {integrity: sha512-MWGmWa45v4Ds3NJNNwQc3GCFdjtH3k4ypDWoWkwultMVLf7aOHR9VaXGYGZHLOQS4sMfbkBSjNUYoXCSmLuRSA==}
     hasBin: true
     dependencies:
       editor: 1.0.0
@@ -6188,17 +6182,6 @@ packages:
 
   /fast-diff@1.3.0:
     resolution: {integrity: sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==}
-    dev: true
-
-  /fast-glob@3.2.12:
-    resolution: {integrity: sha512-DVj4CQIYYow0BlaelwK1pHl5n5cRSJfM60UA0zK891sVInoPri2Ekj7+e1CT3/3qxXenpI+nBBmQAcJPJgaj4w==}
-    engines: {node: '>=8.6.0'}
-    dependencies:
-      '@nodelib/fs.stat': 2.0.5
-      '@nodelib/fs.walk': 1.2.8
-      glob-parent: 5.1.2
-      merge2: 1.4.1
-      micromatch: 4.0.5
     dev: true
 
   /fast-glob@3.3.2:
@@ -9261,27 +9244,6 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
-    dev: true
-
-  /rollup-plugin-dts@6.1.0(rollup@4.9.1)(typescript@5.3.3):
-    resolution: {integrity: sha512-ijSCPICkRMDKDLBK9torss07+8dl9UpY9z1N/zTeA1cIqdzMlpkV3MOOC7zukyvQfDyxa1s3Dl2+DeiP/G6DOw==}
-    engines: {node: '>=16'}
-    peerDependencies:
-      rollup: ^3.29.4 || ^4
-      typescript: ^4.5 || ^5.0
-    dependencies:
-      magic-string: 0.30.5
-      rollup: 4.9.1
-      typescript: 5.3.3
-    optionalDependencies:
-      '@babel/code-frame': 7.23.5
-    dev: true
-
-  /rollup-plugin-multi-input@1.4.1:
-    resolution: {integrity: sha512-ybvotObZFFDEbqw6MDrYUa/TXmF+1qCVX3svpAddmIOLP3/to5zkSKP0MJV5bNBZfFFpblwChurz4tsPR/zJew==}
-    engines: {node: '>=16'}
-    dependencies:
-      fast-glob: 3.2.12
     dev: true
 
   /rollup-plugin-typescript2@0.36.0(rollup@4.9.1)(typescript@5.3.3):
