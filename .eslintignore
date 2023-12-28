@@ -37,5 +37,7 @@
 # config
 **/.babelrc.json
 **/.stylelintrc.json
+**/.eslintrc.js
 **/*config.js
 **/*.config.js
+
