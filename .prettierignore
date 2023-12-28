@@ -29,6 +29,7 @@
 # config
 **/tsconfig.json
 **/.eslintrc.json
+**/.eslintrc.cjs
 **/.eslintrc.js
 **/.stylelintrc.json
 **/*.config.js

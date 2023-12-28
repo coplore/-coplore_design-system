@@ -1,6 +1,7 @@
 {
 	"name": "@coplore/react-ui",
 	"version": "0.0.1",
+	"type": "module",
 	"description": "🎨 Coplore Design System | react-ui package",
 	"license": "MIT",
 	"contributors": [
@@ -30,13 +31,27 @@
 	"files": [
 		"dist"
 	],
-	"scripts": {},
+	"scripts": {
+		"dev": "rollup -c --watch",
+		"build": "rollup -c"
+	},
+	"dependencies": {
+		"classnames": "^2.5.0"
+	},
 	"devDependencies": {
+		"@rollup/plugin-commonjs": "^25.0.7",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^11.1.5",
+		"@types/node": "^20.10.5",
 		"@types/react": "^18.2.45",
 		"@types/react-dom": "^18.2.18",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
 		"eslint-plugin-react": "^7.33.2",
-		"eslint-plugin-react-hooks": "^4.6.0"
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"rollup": "^4.9.1",
+		"rollup-plugin-typescript2": "^0.36.0",
+		"typescript": "^5.3.3"
 	},
 	"peerDependencies": {
 		"react": "^18.2.0",

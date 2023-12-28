@@ -20,7 +20,6 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended'
 	],
 	plugins: [
-    'jsx-a11y',
     '@typescript-eslint'
   ],
 	rules: {}
