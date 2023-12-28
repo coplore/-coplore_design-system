@@ -10,21 +10,14 @@
 
 ## 🚀 Installation
 
-npm
-
 ```shell
+# using npm
 npm install @coplore/react-ui
-```
 
-yarn
-
-```shell
+# using yarn
 yarn add @coplore/react-ui
-```
 
-pnpm
-
-```shell
+# using pnpm
 pnpm add @coplore/react-ui
 ```
 

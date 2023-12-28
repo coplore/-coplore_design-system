@@ -8,29 +8,22 @@
 
 <br />
 
-## 🚀 Installation
-
-npm
+## Installation
 
 ```shell
+# using npm
 npm install @coplore/styles
-```
 
-yarn
-
-```shell
+# using yarn
 yarn add @coplore/styles
-```
 
-pnpm
-
-```shell
+# using pnpm
 pnpm add @coplore/styles
 ```
 
 <br />
 
-## 🛠️ Usage
+## Usage
 
 최상단 파일에 `global.css`를 import 해주세요.
 
@@ -40,7 +33,7 @@ import '@coplore/styles/global.css';
 
 <br />
 
-## 🎨 Customize
+## Customize
 
 `@coplore/styles`은 사용자의 원하는 theme에 맞게 커스텀 마이징 할 수 있도록 제공합니다.
 
