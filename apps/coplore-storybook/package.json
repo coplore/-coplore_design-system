@@ -21,10 +21,14 @@
 		"url": "https://github.com/coplore/coplore_design-system"
 	},
 	"scripts": {
+		"dev": "pnpm storybook",
+		"build": "pnpm build",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},
 	"dependencies": {
+		"@coplore/react-ui": "workspace:^",
+		"@coplore/styles": "workspace:^",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},

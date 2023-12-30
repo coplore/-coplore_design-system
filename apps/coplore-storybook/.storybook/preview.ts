@@ -1,3 +1,4 @@
+import '@coplore/styles/global.css';
 import { Preview } from '@storybook/react';
 
 const preview: Preview = {
