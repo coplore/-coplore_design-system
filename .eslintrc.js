@@ -22,5 +22,8 @@ module.exports = {
 	plugins: [
     '@typescript-eslint'
   ],
+	ignorePatterns: [
+		"**/scripts/*.js"
+	],
 	rules: {}
 };
