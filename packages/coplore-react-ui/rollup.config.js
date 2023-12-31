@@ -36,7 +36,7 @@ const commonOption = {
 const cjsOption = {
   ...commonOption,
   output: {
-    file: pkg.exports['.'].require,
+    file: pkg.exports["."].require.default,
     format: 'cjs',
     sourcemap: true,
     exports: 'named',
@@ -47,7 +47,7 @@ const cjsOption = {
 const esmOption = {
   ...commonOption,
   output: {
-    file: pkg.exports['.'].import,
+    file: pkg.exports["."].import.default,
     format: 'esm',
     sourcemap: true,
     exports: 'auto',

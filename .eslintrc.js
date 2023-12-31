@@ -25,5 +25,7 @@ module.exports = {
 	ignorePatterns: [
 		"**/scripts/*.js"
 	],
-	rules: {}
+	rules: {
+		"@typescript-eslint/no-unused-vars": "warn",
+	}
 };
