@@ -7,7 +7,7 @@ const meta: Meta<typeof Button> = {
 	parameters: {
 		layout: 'centered'
 	},
-	tags: ['autodocs']
+	argTypes: {}
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -15,5 +15,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const ButtonStory: Story = {
-	args: {}
+	args: {
+		children: 'Button'
+	}
 };

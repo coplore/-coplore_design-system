@@ -30,6 +30,7 @@
 		"@coplore/react-ui": "workspace:^",
 		"@coplore/styles": "workspace:^",
 		"react": "^18.2.0",
+		"react-docgen-typescript": "^2.2.2",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
@@ -42,6 +43,8 @@
 		"@storybook/react-vite": "^7.6.6",
 		"@storybook/test": "^7.6.6",
 		"@storybook/theming": "^7.6.6",
+		"@types/react": "^18.2.45",
+		"@types/react-dom": "^18.2.18",
 		"eslint-plugin-storybook": "^0.6.15",
 		"storybook": "^7.6.6"
 	}
