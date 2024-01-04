@@ -32,7 +32,6 @@ module.exports = {
   scopes: [
     { name: "empty", value: false },
     { name: "@coplore/docs" },
-    { name: "@coplore/storybook" },
     { name: "@coplore/react-ui" },
     { name: "@coplore/styles" }
   ],
