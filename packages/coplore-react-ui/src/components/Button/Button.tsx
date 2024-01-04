@@ -2,10 +2,10 @@ import { forwardRef } from 'react';
 import type { ButtonProps } from './Button.types';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-	const { color = 'default', children, ...rest } = props;
+	const { children, color, ...rest } = props;
 
 	return (
-		<button ref={ref} {...rest}>
+		<button ref={ref} type="button" style={{ backgroundColor: 'royalblue' }} {...rest}>
 			{children}
 		</button>
 	);
