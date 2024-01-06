@@ -1,19 +1,17 @@
 {
-  "extends": [
-    "../../.eslintrc.js",
-    "plugin:react/recommended",
-    "plugin:storybook/recommended",
-    "plugin:react-hooks/recommended"
-  ],
-  "plugins": [
-    "jsx-a11y"
-  ],
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "rules": {
-    "react/react-in-jsx-scope": "off"
-  }
+	"extends": [
+		"../../.eslintrc.js",
+		"plugin:react/recommended",
+		"plugin:storybook/recommended",
+		"plugin:react-hooks/recommended"
+	],
+	"plugins": ["jsx-a11y"],
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"rules": {
+		"react/react-in-jsx-scope": "off"
+	}
 }

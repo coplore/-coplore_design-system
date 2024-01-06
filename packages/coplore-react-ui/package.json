@@ -40,11 +40,10 @@
 	"scripts": {
 		"dev": "rollup -c --watch",
 		"build": "rollup -c",
-		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
+		"lint": "eslint . --max-warnings 0",
+		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
 	},
 	"dependencies": {
-		"@coplore/styles": "workspace:^",
 		"classnames": "^2.5.0"
 	},
 	"devDependencies": {
@@ -52,27 +51,14 @@
 		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@rollup/plugin-terser": "^0.4.4",
 		"@rollup/plugin-typescript": "^11.1.5",
-		"@storybook/addon-essentials": "^7.6.7",
-		"@storybook/addon-interactions": "^7.6.7",
-		"@storybook/addon-links": "^7.6.7",
-		"@storybook/blocks": "^7.6.7",
-		"@storybook/manager-api": "^7.6.6",
-		"@storybook/react": "^7.6.7",
-		"@storybook/react-vite": "^7.6.7",
-		"@storybook/test": "^7.6.7",
-		"@storybook/theming": "^7.6.6",
 		"@types/node": "^20.10.5",
 		"@types/react": "^18.2.45",
 		"@types/react-dom": "^18.2.18",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
 		"eslint-plugin-react": "^7.33.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-storybook": "^0.6.15",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
 		"rollup": "^4.9.1",
 		"rollup-plugin-typescript2": "^0.36.0",
-		"storybook": "^7.6.7",
 		"typescript": "^5.3.3"
 	},
 	"peerDependencies": {

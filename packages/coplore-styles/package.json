@@ -29,7 +29,8 @@
 		"dev": "pnpm nodemon --watch src --exec pnpm build --dev -e scss",
 		"build": "node ./scripts/build.js",
 		"lint": "stylelint '**/*.scss'",
-		"lint:fix": "stylelint --fix **/*.scss"
+		"lint:fix": "stylelint --fix **/*.scss",
+		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.16",

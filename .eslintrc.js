@@ -1,3 +1,4 @@
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
 	root: true,
 	env: {
@@ -18,6 +19,7 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended'
 	],
 	plugins: ['@typescript-eslint'],
+	ignorePatterns: ['node_modules/', '.eslintrc.js'],
 	rules: {
 		'@typescript-eslint/no-unused-vars': 'warn'
 	}

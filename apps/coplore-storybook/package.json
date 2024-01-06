@@ -1,0 +1,52 @@
+{
+	"name": "@coplore/storybook",
+	"private": true,
+	"version": "0.0.1",
+	"description": "🎨 Coplore Design System | storybook app",
+	"license": "MIT",
+	"contributors": [
+		{
+			"name": "chan9yu",
+			"email": "wry5533@gmail.com",
+			"url": "https://github.com/chan9yu"
+		},
+		{
+			"name": "KimTeaSick",
+			"email": "notseph8556@gmail.com",
+			"url": "https://github.com/KimTeaSick"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/coplore/coplore_design-system"
+	},
+	"scripts": {
+		"dev": "storybook dev -p 6006",
+		"build": "storybook build --docs",
+		"preview": "serve storybook-static",
+		"clean": "rm -rf .turbo && rm -rf node_modules",
+		"lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
+	},
+	"dependencies": {
+		"@coplore/react-ui": "workspace:^",
+		"@coplore/styles": "workspace:^",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@storybook/addon-essentials": "^7.6.7",
+		"@storybook/addon-interactions": "^7.6.7",
+		"@storybook/addon-links": "^7.6.7",
+		"@storybook/blocks": "^7.6.7",
+		"@storybook/react": "^7.6.7",
+		"@storybook/react-vite": "^7.6.7",
+		"@storybook/test": "^7.6.7",
+		"@types/react": "^18.2.45",
+		"@types/react-dom": "^18.2.18",
+		"eslint-plugin-mdx": "^2.3.2",
+		"eslint-plugin-storybook": "^0.6.15",
+		"serve": "^14.2.1",
+		"storybook": "^7.6.7",
+		"typescript": "^5.3.3"
+	}
+}
