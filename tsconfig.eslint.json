@@ -1,4 +1,6 @@
 {
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Eslint",
 	"extends": "./tsconfig.base.json",
 	"include": ["apps", "packages", ".eslintrc.js"]
 }

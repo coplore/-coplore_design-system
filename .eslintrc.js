@@ -7,25 +7,18 @@ module.exports = {
 	},
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
-    sourceType: "module",
+		sourceType: 'module',
 		project: './tsconfig.eslint.json',
 		tsconfigRootDir: __dirname
 	},
 	extends: [
-		'prettier',
+		'prettier', //
 		'eslint:recommended',
-		'plugin:react/recommended',
 		'plugin:prettier/recommended',
-		'plugin:react-hooks/recommended',
 		'plugin:@typescript-eslint/recommended'
 	],
-	plugins: [
-    '@typescript-eslint'
-  ],
-	ignorePatterns: [
-		"**/scripts/*.js"
-	],
+	plugins: ['@typescript-eslint'],
 	rules: {
-		"@typescript-eslint/no-unused-vars": "warn",
+		'@typescript-eslint/no-unused-vars': 'warn'
 	}
 };
