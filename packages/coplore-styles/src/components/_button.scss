@@ -1,6 +1,166 @@
 $btn-prefix: #{$prefix}btn-;
 
-button {
-	--#{$btn-prefix}background-color: var(--#{$prefix}blue-500);
-	background-color: var(--#{$btn-prefix}background-color);
+@mixin btn-reset {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	appearance: none;
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+}
+
+@mixin btn-base {
+	@include flex-center;
+	gap: 8px;
+	transition: 100ms ease-out;
+
+	&:active {
+		transform: scale(0.95);
+	}
+}
+
+.btn {
+	@include btn-reset;
+	@include btn-base;
+
+	// base
+	border-radius: var(--#{$btn-prefix}border-radius, 4px);
+	cursor: var(--#{$btn-prefix}cursor, pointer);
+
+	// color
+	background-color: var(--#{$btn-prefix}background-color, --#{$prefix}blue-grey-100);
+	color: var(--#{$btn-prefix}color);
+
+	// size
+	font-size: var(--#{$btn-prefix}font-size, var(--#{$prefix}font-size-100));
+	font-weight: var(--#{$btn-prefix}font-weight, var(--#{$prefix}font-weight-semibold));
+	padding: var(--#{$btn-prefix}padding, 14px);
+	width: var(--#{$btn-prefix}width, auto);
+	height: var(--#{$btn-prefix}height, 46px);
+
+	&:hover {
+		background-color: var(--#{$btn-prefix}background-color-hover, var(--#{$prefix}blue-grey-200));
+	}
+
+	&:active {
+		background-color: var(--#{$btn-prefix}background-color-active, var(--#{$prefix}blue-grey-300));
+	}
+
+	&--full-width {
+		--#{$btn-prefix}width: 100%;
+	}
+}
+
+.btn__color {
+	&--default {
+		// @TODO theme grey 필요
+		--#{$btn-prefix}background-color: var(--#{$prefix}grey-100);
+		--#{$btn-prefix}color: var(--#{$prefix}grey-900);
+		--#{$btn-prefix}background-color-hover: var(--#{$prefix}grey-200);
+		--#{$btn-prefix}background-color-active: var(--#{$prefix}grey-300);
+	}
+
+	&--light {
+		// @TODO light grey 필요
+		--#{$btn-prefix}background-color: var(--#{$prefix}grey-100);
+		--#{$btn-prefix}color: var(--#{$prefix}grey-900);
+		--#{$btn-prefix}background-color-hover: var(--#{$prefix}grey-200);
+		--#{$btn-prefix}background-color-active: var(--#{$prefix}grey-300);
+	}
+
+	&--dark {
+		// @TODO dark grey 필요
+		--#{$btn-prefix}background-color: var(--#{$prefix}grey-100);
+		--#{$btn-prefix}color: var(--#{$prefix}grey-900);
+		--#{$btn-prefix}background-color-hover: var(--#{$prefix}grey-200);
+		--#{$btn-prefix}background-color-active: var(--#{$prefix}grey-300);
+	}
+
+	&--ghost {
+		// @TODO ghost 스타일 필요
+		--#{$btn-prefix}background-color: var(--#{$prefix}grey-100);
+		--#{$btn-prefix}color: var(--#{$prefix}grey-900);
+		--#{$btn-prefix}background-color-hover: var(--#{$prefix}grey-200);
+		--#{$btn-prefix}background-color-active: var(--#{$prefix}grey-300);
+	}
+
+	&--primary {
+		--#{$btn-prefix}background-color: var(--#{$prefix}primary-500);
+		--#{$btn-prefix}color: var(--#{$prefix}white);
+		--#{$btn-prefix}background-color-hover: var(--#{$prefix}primary-600);
+		--#{$btn-prefix}background-color-active: var(--#{$prefix}primary-700);
+	}
+
+	&--secondary {
+		--#{$btn-prefix}background-color: var(--#{$prefix}secondary-500);
+		--#{$btn-prefix}color: var(--#{$prefix}white);
+		--#{$btn-prefix}background-color-hover: var(--#{$prefix}secondary-600);
+		--#{$btn-prefix}background-color-active: var(--#{$prefix}secondary-700);
+	}
+
+	&--info {
+		--#{$btn-prefix}background-color: var(--#{$prefix}info-500);
+		--#{$btn-prefix}color: var(--#{$prefix}white);
+		--#{$btn-prefix}background-color-hover: var(--#{$prefix}info-600);
+		--#{$btn-prefix}background-color-active: var(--#{$prefix}info-700);
+	}
+
+	&--success {
+		--#{$btn-prefix}background-color: var(--#{$prefix}success-500);
+		--#{$btn-prefix}color: var(--#{$prefix}white);
+		--#{$btn-prefix}background-color-hover: var(--#{$prefix}success-600);
+		--#{$btn-prefix}background-color-active: var(--#{$prefix}success-700);
+	}
+
+	&--warning {
+		--#{$btn-prefix}background-color: var(--#{$prefix}warning-500);
+		--#{$btn-prefix}color: var(--#{$prefix}white);
+		--#{$btn-prefix}background-color-hover: var(--#{$prefix}warning-600);
+		--#{$btn-prefix}background-color-active: var(--#{$prefix}warning-700);
+	}
+
+	&--error {
+		--#{$btn-prefix}background-color: var(--#{$prefix}error-500);
+		--#{$btn-prefix}color: var(--#{$prefix}white);
+		--#{$btn-prefix}background-color-hover: var(--#{$prefix}error-600);
+		--#{$btn-prefix}background-color-active: var(--#{$prefix}error-700);
+	}
+}
+
+.btn__size {
+	&--xl {
+		--#{$btn-prefix}font-size: var(--#{$prefix}font-size-300);
+		--#{$btn-prefix}padding: var(--#{$prefix}spacing-400, 32px);
+		--#{$btn-prefix}height: 64px;
+	}
+
+	&--lg {
+		--#{$btn-prefix}font-size: var(--#{$prefix}font-size-300);
+		--#{$btn-prefix}padding: var(--#{$prefix}spacing-300, 24px);
+		--#{$btn-prefix}height: 58px;
+	}
+
+	&--md {
+		--#{$btn-prefix}font-size: var(--#{$prefix}font-size-100);
+		--#{$btn-prefix}padding: var(--#{$prefix}spacing-200, 16px);
+		--#{$btn-prefix}height: 46px;
+	}
+
+	&--sm {
+		--#{$btn-prefix}font-size: var(--#{$prefix}font-size-100);
+		--#{$btn-prefix}padding: var(--#{$prefix}spacing-150, 12px);
+		--#{$btn-prefix}height: 32px;
+	}
+
+	&--xs {
+		--#{$btn-prefix}font-size: var(--#{$prefix}font-size-75);
+		--#{$btn-prefix}padding: var(--#{$prefix}spacing-100, 8px);
+		--#{$btn-prefix}height: 24px;
+	}
 }
