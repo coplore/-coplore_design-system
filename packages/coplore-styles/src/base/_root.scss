@@ -8,7 +8,7 @@
 :root,
 [data-theme='light'] {
 	/* ====== breakpoint variable ====== */
-	@include defineVariable($grid-breakpoints);
+	@include defineVariable($breakpoints);
 
 	/* ====== color variable ====== */
 	--#{$prefix}white: #{$white};
@@ -47,7 +47,7 @@
 	@include defineVariable($font-sizes);
 	@include defineVariable($font-weights);
 
-	@media (max-width: 767px) {
+	@include media-breakpoint-up(md) {
 		@include defineVariable($mobile-font-sizes);
 	}
 }

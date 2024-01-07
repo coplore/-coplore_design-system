@@ -1,5 +1,15 @@
 @use 'sass:map';
 
+@function breakpoint-min($name, $breakpoints: $breakpoints) {
+	$min: map.get($breakpoints, $name);
+	@return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $breakpoints: $breakpoints) {
+	$max: map.get($breakpoints, $name);
+	@return if($max and $max > 0, $max, null);
+}
+
 /* 투명도 값을 포함한 색상을 반환하는 함수 */
 @function get-opacity-color($hexcode, $opacity-key) {
 	$opacity-values: (
