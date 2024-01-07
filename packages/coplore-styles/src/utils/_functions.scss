@@ -2,12 +2,16 @@
 
 @function breakpoint-min($name, $breakpoints: $breakpoints) {
 	$min: map.get($breakpoints, $name);
-	@return if($min != 0, $min, null);
+	$result: if($min != 0, $min, null);
+
+	@return $result;
 }
 
 @function breakpoint-max($name, $breakpoints: $breakpoints) {
 	$max: map.get($breakpoints, $name);
-	@return if($max and $max > 0, $max, null);
+	$result: if($max and $max > 0, $max, null);
+
+	@return $result;
 }
 
 /* 투명도 값을 포함한 색상을 반환하는 함수 */

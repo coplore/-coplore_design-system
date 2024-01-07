@@ -5,14 +5,13 @@
 	}
 }
 
-:root,
-[data-theme='light'] {
+:root {
+	// [data-theme='light'] {
 	/* ====== breakpoint variable ====== */
 	@include defineVariable($breakpoints);
 
 	/* ====== color variable ====== */
-	--#{$prefix}white: #{$white};
-	--#{$prefix}black: #{$black};
+	@include defineVariable($monochrome-colors);
 	@include defineVariable($red-colors);
 	@include defineVariable($pink-colors);
 	@include defineVariable($purple-colors);
@@ -38,6 +37,7 @@
 	@include defineVariable($success-colors);
 	@include defineVariable($warning-colors);
 	@include defineVariable($error-colors);
+
 	/* ====== shadow variable ====== */
 
 	/* ====== spacing variable ====== */
@@ -47,7 +47,7 @@
 	@include defineVariable($font-sizes);
 	@include defineVariable($font-weights);
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-down('md') {
 		@include defineVariable($mobile-font-sizes);
 	}
 }

@@ -1,14 +1,14 @@
+/* utils */
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'utils/functions';
+
 /* foundation */
 @import 'foundation/breakpoint';
 @import 'foundation/color';
 @import 'foundation/shadow';
 @import 'foundation/spacing';
 @import 'foundation/typography';
-
-/* utils */
-@import 'utils/variables';
-@import 'utils/mixins';
-@import 'utils/functions';
 
 /* base */
 @import 'base/reset';
