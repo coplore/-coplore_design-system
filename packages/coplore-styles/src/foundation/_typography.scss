@@ -1,0 +1,85 @@
+$font-size-50: 11px !default;
+$font-size-75: 12px !default;
+$font-size-100: 14px !default;
+$font-size-200: 16px !default;
+$font-size-300: 18px !default;
+$font-size-400: 20px !default;
+$font-size-500: 22px !default;
+$font-size-600: 25px !default;
+$font-size-700: 28px !default;
+$font-size-800: 32px !default;
+$font-size-900: 36px !default;
+$font-size-1000: 40px !default;
+$font-size-1100: 45px !default;
+$font-size-1200: 50px !default;
+$font-size-1300: 60px !default;
+
+$m-font-size-50: 13px !default;
+$m-font-size-75: 15px !default;
+$m-font-size-100: 17px !default;
+$m-font-size-200: 19px !default;
+$m-font-size-300: 22px !default;
+$m-font-size-400: 24px !default;
+$m-font-size-500: 27px !default;
+$m-font-size-600: 31px !default;
+$m-font-size-700: 34px !default;
+$m-font-size-800: 39px !default;
+$m-font-size-900: 44px !default;
+$m-font-size-1000: 49px !default;
+$m-font-size-1100: 55px !default;
+$m-font-size-1200: 62px !default;
+$m-font-size-1300: 70px !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-extrabold: 800 !default;
+$font-weight-black: 900 !default;
+
+$font-sizes: (
+	'font-size-50': $font-size-50,
+	'font-size-75': $font-size-75,
+	'font-size-100': $font-size-100,
+	'font-size-200': $font-size-200,
+	'font-size-300': $font-size-300,
+	'font-size-400': $font-size-400,
+	'font-size-500': $font-size-500,
+	'font-size-600': $font-size-600,
+	'font-size-700': $font-size-700,
+	'font-size-800': $font-size-800,
+	'font-size-900': $font-size-900,
+	'font-size-1000': $font-size-1000,
+	'font-size-1100': $font-size-1100,
+	'font-size-1200': $font-size-1200,
+	'font-size-1300': $font-size-1300
+) !default;
+
+$mobile-font-sizes: (
+	'font-size-50': $m-font-size-50,
+	'font-size-75': $m-font-size-75,
+	'font-size-100': $m-font-size-100,
+	'font-size-200': $m-font-size-200,
+	'font-size-300': $m-font-size-300,
+	'font-size-400': $m-font-size-400,
+	'font-size-500': $m-font-size-500,
+	'font-size-600': $m-font-size-600,
+	'font-size-700': $m-font-size-700,
+	'font-size-800': $m-font-size-800,
+	'font-size-900': $m-font-size-900,
+	'font-size-1000': $m-font-size-1000,
+	'font-size-1100': $m-font-size-1100,
+	'font-size-1200': $m-font-size-1200,
+	'font-size-1300': $m-font-size-1300
+) !default;
+
+$font-weights: (
+	'font-weight-light': $font-weight-light,
+	'font-weight-normal': $font-weight-normal,
+	'font-weight-medium': $font-weight-medium,
+	'font-weight-semibold': $font-weight-semibold,
+	'font-weight-bold': $font-weight-bold,
+	'font-weight-extrabold': $font-weight-extrabold,
+	'font-weight-black': $font-weight-black
+) !default;

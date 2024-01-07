@@ -13,29 +13,41 @@
 	/* ====== color variable ====== */
 	--#{$prefix}white: #{$white};
 	--#{$prefix}black: #{$black};
-	@include defineVariable($reds);
-	@include defineVariable($pinks);
-	@include defineVariable($purples);
-	@include defineVariable($deep-purples);
-	@include defineVariable($indigos);
-	@include defineVariable($blues);
-	@include defineVariable($light-blues);
-	@include defineVariable($cyans);
-	@include defineVariable($teals);
-	@include defineVariable($greens);
-	@include defineVariable($light-greens);
-	@include defineVariable($limes);
-	@include defineVariable($yellows);
-	@include defineVariable($ambers);
-	@include defineVariable($oranges);
-	@include defineVariable($deep-oranges);
-	@include defineVariable($browns);
-	@include defineVariable($blue-greys);
-
+	@include defineVariable($red-colors);
+	@include defineVariable($pink-colors);
+	@include defineVariable($purple-colors);
+	@include defineVariable($deep-purple-colors);
+	@include defineVariable($indigo-colors);
+	@include defineVariable($blue-colors);
+	@include defineVariable($light-blue-colors);
+	@include defineVariable($cyan-colors);
+	@include defineVariable($teal-colors);
+	@include defineVariable($green-colors);
+	@include defineVariable($light-green-colors);
+	@include defineVariable($lime-colors);
+	@include defineVariable($yellow-colors);
+	@include defineVariable($amber-colors);
+	@include defineVariable($orange-colors);
+	@include defineVariable($deep-orange-colors);
+	@include defineVariable($brown-colors);
+	@include defineVariable($grey-colors);
+	@include defineVariable($blue-grey-colors);
+	@include defineVariable($primary-colors);
+	@include defineVariable($secondary-colors);
+	@include defineVariable($info-colors);
+	@include defineVariable($success-colors);
+	@include defineVariable($warning-colors);
+	@include defineVariable($error-colors);
 	/* ====== shadow variable ====== */
 
 	/* ====== spacing variable ====== */
 	@include defineVariable($spacings);
 
 	/* ====== typography variable ====== */
+	@include defineVariable($font-sizes);
+	@include defineVariable($font-weights);
+
+	@media (max-width: 767px) {
+		@include defineVariable($mobile-font-sizes);
+	}
 }
