@@ -12,6 +12,8 @@
 
 	/* ====== color variable ====== */
 	@include defineVariable($monochrome-colors);
+	@include defineVariable($grey-colors);
+	@include defineVariable($grey-opacity-colors);
 	@include defineVariable($red-colors);
 	@include defineVariable($pink-colors);
 	@include defineVariable($purple-colors);
@@ -29,15 +31,12 @@
 	@include defineVariable($orange-colors);
 	@include defineVariable($deep-orange-colors);
 	@include defineVariable($brown-colors);
-	@include defineVariable($grey-colors);
-	@include defineVariable($blue-grey-colors);
 	@include defineVariable($primary-colors);
 	@include defineVariable($secondary-colors);
 	@include defineVariable($info-colors);
 	@include defineVariable($success-colors);
 	@include defineVariable($warning-colors);
 	@include defineVariable($error-colors);
-
 	/* ====== shadow variable ====== */
 
 	/* ====== spacing variable ====== */
