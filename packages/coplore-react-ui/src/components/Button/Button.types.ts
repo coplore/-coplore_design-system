@@ -8,7 +8,7 @@ export type ButtonProps = {
 	 * - 'default', 'primary', 'secondary' 등 다양한 테마로 설정 가능합니다.
 	 * @default default
 	 */
-	color?: 'default' | 'light' | 'dark' | 'ghost' | 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error';
+	color?: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error' | 'ghost';
 
 	/**
 	 * - 버튼의 끝에 표시되는 아이콘입니다.
@@ -29,11 +29,10 @@ export type ButtonProps = {
 	loading?: boolean;
 
 	/**
-	 * - 버튼의 모양을 결정합니다.
-	 * - 'circle'는 원형, 'square'는 사각형 모양입니다.
-	 * @default undefined
+	 * - 버튼 애니메이션 여부를 설정합니다.
+	 * @default false
 	 */
-	shape?: 'circle' | 'square';
+	noAnimation?: boolean;
 
 	/**
 	 * - 버튼의 크기를 설정합니다.
@@ -50,8 +49,8 @@ export type ButtonProps = {
 
 	/**
 	 * - 버튼의 변형을 설정합니다.
-	 * - 'link'는 링크 스타일, 'outline'은 외곽선 스타일입니다.
-	 * @default undefined
+	 * - 'filled'는 꽉찬 스타일, 'outline'은 외곽선 스타일입니다.
+	 * @default filled
 	 */
-	variant?: 'link' | 'outline';
+	variant?: 'filled' | 'outline';
 } & ExtendsedType;

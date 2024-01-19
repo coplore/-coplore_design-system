@@ -7,14 +7,14 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 	const {
 		children,
 		className: classNameProps,
-		color = 'default',
+		color = 'primary',
 		endIcon,
 		fullWidth = false,
 		loading = false,
-		shape,
+		noAnimation = false,
 		size = 'md',
 		startIcon,
-		variant,
+		variant = 'filled',
 		...rest
 	} = props;
 
@@ -22,8 +22,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
 		'btn',
 		{ 'btn--full-width': fullWidth },
 		{ 'btn--loading': loading },
+		{ 'btn--no-animation': noAnimation },
 		`btn__color--${color}`,
-		`btn__shape--${shape}`,
 		`btn__size--${size}`,
 		`btn__variant--${variant}`,
 		classNameProps
