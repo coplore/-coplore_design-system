@@ -19,6 +19,34 @@ $grey-colors: (
 	'grey-900': #212121
 ) !default;
 
+$white-opacity-colors: (
+	'white-opacity-100': get-opacity-color(map.get($monochrome-colors, 'white'), 100),
+	'white-opacity-95': get-opacity-color(map.get($monochrome-colors, 'white'), 95),
+	'white-opacity-90': get-opacity-color(map.get($monochrome-colors, 'white'), 90),
+	'white-opacity-80': get-opacity-color(map.get($monochrome-colors, 'white'), 80),
+	'white-opacity-70': get-opacity-color(map.get($monochrome-colors, 'white'), 70),
+	'white-opacity-60': get-opacity-color(map.get($monochrome-colors, 'white'), 60),
+	'white-opacity-50': get-opacity-color(map.get($monochrome-colors, 'white'), 50),
+	'white-opacity-40': get-opacity-color(map.get($monochrome-colors, 'white'), 40),
+	'white-opacity-30': get-opacity-color(map.get($monochrome-colors, 'white'), 30),
+	'white-opacity-20': get-opacity-color(map.get($monochrome-colors, 'white'), 20),
+	'white-opacity-10': get-opacity-color(map.get($monochrome-colors, 'white'), 10)
+);
+
+$black-opacity-colors: (
+	'black-opacity-100': get-opacity-color(map.get($monochrome-colors, 'black'), 100),
+	'black-opacity-95': get-opacity-color(map.get($monochrome-colors, 'black'), 95),
+	'black-opacity-90': get-opacity-color(map.get($monochrome-colors, 'black'), 90),
+	'black-opacity-80': get-opacity-color(map.get($monochrome-colors, 'black'), 80),
+	'black-opacity-70': get-opacity-color(map.get($monochrome-colors, 'black'), 70),
+	'black-opacity-60': get-opacity-color(map.get($monochrome-colors, 'black'), 60),
+	'black-opacity-50': get-opacity-color(map.get($monochrome-colors, 'black'), 50),
+	'black-opacity-40': get-opacity-color(map.get($monochrome-colors, 'black'), 40),
+	'black-opacity-30': get-opacity-color(map.get($monochrome-colors, 'black'), 30),
+	'black-opacity-20': get-opacity-color(map.get($monochrome-colors, 'black'), 20),
+	'black-opacity-10': get-opacity-color(map.get($monochrome-colors, 'black'), 10)
+);
+
 $grey-opacity-colors: (
 	'grey-opacity-100': get-opacity-color(map.get($grey-colors, 'grey-900'), 100),
 	'grey-opacity-95': get-opacity-color(map.get($grey-colors, 'grey-900'), 95),
