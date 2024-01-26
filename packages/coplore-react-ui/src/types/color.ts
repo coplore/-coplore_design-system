@@ -29,7 +29,10 @@ export type MonochromeColorPalette =
 
 export type GreyColorPalette = `grey.${ColorShade}`;
 
-export type GreyOpacityColorPalette = `grey-opacity.${OpacityColorShade}`;
+export type GreyOpacityColorPalette =
+	| `white-opacity.${OpacityColorShade}` //
+	| `black-opacity.${OpacityColorShade}`
+	| `grey-opacity.${OpacityColorShade}`;
 
 export type AchromaticColorPalette =
 	| MonochromeColorPalette //

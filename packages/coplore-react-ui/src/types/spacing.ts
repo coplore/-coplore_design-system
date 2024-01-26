@@ -1,4 +1,4 @@
-export type Spacing =
+export type CoploreSpacing =
 	| '0' //
 	| '25'
 	| '50'
