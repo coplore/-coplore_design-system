@@ -28,3 +28,16 @@ export type CoploreDisplay =
 	| 'initial'
 	| 'contents'
 	| 'flow-root';
+
+export type CoplorePointerEvents =
+	| 'none' //
+	| 'auto'
+	| 'visible'
+	| 'painted';
+
+export type CoplorePosition =
+	| 'static' //
+	| 'relative'
+	| 'absolute'
+	| 'fixed'
+	| 'sticky';

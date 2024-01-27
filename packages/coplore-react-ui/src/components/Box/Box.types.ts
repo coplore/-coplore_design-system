@@ -1,42 +1,54 @@
-import { CSSProperties } from 'react';
+import type { ElementType, HTMLAttributes } from 'react';
+import type {
+	ColorPalette,
+	CoploreCursor,
+	CoploreDisplay,
+	CoplorePointerEvents,
+	CoplorePosition,
+	CoploreSize,
+	CoploreSpacing,
+	CoploreZIndex,
+	ThemeSize
+} from '../../types';
 
-export type BoxProps = {
-	// color
-	color?: string;
-	bgColor?: string;
+type DefaultProps = Omit<HTMLAttributes<HTMLElement>, 'as'>;
 
-	// width
-	width?: string;
-	minWidth?: string;
-	maxWidth?: string;
+export interface BoxProps extends DefaultProps {
+	as?: ElementType;
+	bgColor?: ColorPalette;
+	color?: ColorPalette;
+	cursor?: CoploreCursor;
+	display?: CoploreDisplay;
+	height?: CoploreSize;
+	margin?: CoploreSpacing;
+	marginBottom?: CoploreSpacing;
+	marginLeft?: CoploreSpacing;
+	marginRight?: CoploreSpacing;
+	marginTop?: CoploreSpacing;
+	maxHeight?: CoploreSize;
+	maxWidth?: CoploreSize;
+	minHeight?: CoploreSize;
+	minWidth?: CoploreSize;
+	padding?: CoploreSpacing;
+	paddingBottom?: CoploreSpacing;
+	paddingLeft?: CoploreSpacing;
+	paddingRight?: CoploreSpacing;
+	paddingTop?: CoploreSpacing;
+	pointerEvents?: CoplorePointerEvents;
+	position?: CoplorePosition;
+	width?: CoploreSize;
+	zIndex?: CoploreZIndex;
 
-	// height
-	height?: string;
-	minHeight?: string;
-	maxHeight?: string;
-
-	// margin
-	m?: string;
-	mt?: string;
-	mr?: string;
-	mb?: string;
-	ml?: string;
-	mx?: string;
-	my?: string;
-
-	// padding
-	p?: string;
-	pt?: string;
-	pr?: string;
-	pb?: string;
-	pl?: string;
-	px?: string;
-	py?: string;
-
-	// css attr
-	display?: CSSProperties['display'];
-	position?: CSSProperties['position'];
-	zIndex?: CSSProperties['zIndex'];
-	cursor?: CSSProperties['cursor'];
-	pointerEvents?: CSSProperties['pointerEvents'];
-};
+	// new
+	border?: 'none' | ThemeSize;
+	borderColor?: ColorPalette;
+	borderRadius?: 'none' | ThemeSize | 'full';
+	borderTopRadius?: 'none' | ThemeSize | 'full';
+	borderRightRadius?: 'none' | ThemeSize | 'full';
+	borderBottomRadius?: 'none' | ThemeSize | 'full';
+	borderLeftRadius?: 'none' | ThemeSize | 'full';
+	top?: CoploreSpacing | '0%' | '50%' | '100%';
+	right?: CoploreSpacing | '0%' | '50%' | '100%';
+	bottom?: CoploreSpacing | '0%' | '50%' | '100%';
+	left?: CoploreSpacing | '0%' | '50%' | '100%';
+}
