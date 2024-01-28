@@ -1,0 +1,415 @@
+$box-prefix: #{$prefix}box-;
+
+@mixin generate-color-variants($property, $color, $color-shades: $color-shades) {
+	@each $shade in $color-shades {
+		&--#{$color}-#{$shade} {
+			--#{$box-prefix}#{$property}: var(--#{$prefix}#{$color}-#{$shade});
+		}
+	}
+}
+
+@mixin generate-opacity-variants($property, $color, $opacity-shades: $opacity-shades) {
+	@each $shade in $opacity-shades {
+		&--#{$color}-opacity-#{$shade} {
+			--#{$box-prefix}#{$property}: var(--#{$prefix}#{$color}-opacity-#{$shade});
+		}
+	}
+}
+
+@mixin apply-colors($property) {
+	&--white {
+		--#{$box-prefix}#{$property}: var(--#{$prefix}white);
+	}
+
+	&--black {
+		--#{$box-prefix}#{$property}: var(--#{$prefix}black);
+	}
+
+	@include generate-opacity-variants($property, 'white');
+	@include generate-opacity-variants($property, 'black');
+	@include generate-opacity-variants($property, 'grey');
+	@include generate-color-variants($property, 'grey');
+	@include generate-color-variants($property, 'red');
+	@include generate-color-variants($property, 'pink');
+	@include generate-color-variants($property, 'purple');
+	@include generate-color-variants($property, 'deep-purple');
+	@include generate-color-variants($property, 'indigo');
+	@include generate-color-variants($property, 'blue');
+	@include generate-color-variants($property, 'light-blue');
+	@include generate-color-variants($property, 'cyan');
+	@include generate-color-variants($property, 'teal');
+	@include generate-color-variants($property, 'green');
+	@include generate-color-variants($property, 'light-green');
+	@include generate-color-variants($property, 'lime');
+	@include generate-color-variants($property, 'yellow');
+	@include generate-color-variants($property, 'amber');
+	@include generate-color-variants($property, 'orange');
+	@include generate-color-variants($property, 'deep-orange');
+	@include generate-color-variants($property, 'brown');
+	@include generate-color-variants($property, 'primary');
+	@include generate-color-variants($property, 'secondary');
+	@include generate-color-variants($property, 'info');
+	@include generate-color-variants($property, 'success');
+	@include generate-color-variants($property, 'warning');
+	@include generate-color-variants($property, 'error');
+}
+
+.box {
+	background-color: var(--#{$box-prefix}background-color);
+	border: var(--#{$box-prefix}border) var(--#{$box-prefix}border-color);
+	border-bottom-left-radius: var(--#{$box-prefix}border-bottom-radius);
+	border-bottom-right-radius: var(--#{$box-prefix}border-bottom-radius);
+	border-top-left-radius: var(--#{$box-prefix}border-left-radius);
+	border-bottom-left-radius: var(--#{$box-prefix}border-left-radius);
+	border-radius: var(--#{$box-prefix}border-radius);
+	border-top-right-radius: var(--#{$box-prefix}border-right-radius);
+	border-bottom-right-radius: var(--#{$box-prefix}border-right-radius);
+	border-top-right-radius: var(--#{$box-prefix}border-top-radius);
+	border-top-left-radius: var(--#{$box-prefix}border-top-radius);
+	bottom: var(--#{$box-prefix}bottom);
+	box-shadow: var(--#{$box-prefix}shadow);
+	color: var(--#{$box-prefix}color);
+	cursor: var(--#{$box-prefix}cursor);
+	display: var(--#{$box-prefix}display);
+	height: var(--#{$box-prefix}height);
+	left: var(--#{$box-prefix}left);
+	margin: var(--#{$box-prefix}margin);
+	margin-bottom: var(--#{$box-prefix}margin-bottom);
+	margin-left: var(--#{$box-prefix}margin-left);
+	margin-right: var(--#{$box-prefix}margin-right);
+	margin-top: var(--#{$box-prefix}margin-top);
+	max-height: var(--#{$box-prefix}max-height);
+	max-width: var(--#{$box-prefix}max-width);
+	min-height: var(--#{$box-prefix}min-height);
+	min-width: var(--#{$box-prefix}min-width);
+	padding: var(--#{$box-prefix}padding);
+	padding-bottom: var(--#{$box-prefix}padding-bottom);
+	padding-left: var(--#{$box-prefix}padding-left);
+	padding-right: var(--#{$box-prefix}padding-right);
+	padding-top: var(--#{$box-prefix}padding-top);
+	pointer-events: var(--#{$box-prefix}pointer-events);
+	position: var(--#{$box-prefix}position);
+	right: var(--#{$box-prefix}right);
+	top: var(--#{$box-prefix}top);
+	transform: translateX(var(--#{$box-prefix}translate-x)) translateY(var(--#{$box-prefix}translate-y));
+	width: var(--#{$box-prefix}width);
+	z-index: var(--#{$box-prefix}z-index);
+}
+
+.box__bg-color {
+	@include apply-colors('background-color');
+}
+
+.box__border {
+	$size-list: ('none', 'xs', 'sm', 'md', 'lg', 'xl');
+
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}border: var(--#{$prefix}border-#{$val});
+		}
+	}
+}
+
+.box__border-bottom-radius {
+	$size-list: ('none', 'xs', 'sm', 'md', 'lg', 'xl', 'full');
+
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}border-bottom-radius: var(--#{$prefix}radius-#{$val});
+		}
+	}
+}
+
+.box__border-color {
+	@include apply-colors('border-color');
+}
+
+.box__border-left-radius {
+	$size-list: ('none', 'xs', 'sm', 'md', 'lg', 'xl', 'full');
+
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}border-left-radius: var(--#{$prefix}radius-#{$val});
+		}
+	}
+}
+
+.box__border-radius {
+	$size-list: ('none', 'xs', 'sm', 'md', 'lg', 'xl', 'full');
+
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}border-radius: var(--#{$prefix}radius-#{$val});
+		}
+	}
+}
+
+.box__border-right-radius {
+	$size-list: ('none', 'xs', 'sm', 'md', 'lg', 'xl', 'full');
+
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}border-right-radius: var(--#{$prefix}radius-#{$val});
+		}
+	}
+}
+
+.box__border-top-radius {
+	$size-list: ('none', 'xs', 'sm', 'md', 'lg', 'xl', 'full');
+
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}border-top-radius: var(--#{$prefix}radius-#{$val});
+		}
+	}
+}
+
+.box__bottom {
+	$pos-types: (
+		start: '0',
+		center: '50%',
+		end: '100%'
+	);
+
+	@each $key, $val in $pos-types {
+		&--#{$key} {
+			--#{$box-prefix}bottom: #{$val};
+		}
+	}
+}
+
+.box__shadow {
+	$size-list: ('none', 'xs', 'sm', 'md', 'lg', 'xl');
+
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}shadow: var(--#{$prefix}shadow-#{$val});
+		}
+	}
+}
+
+.box__color {
+	@include apply-colors('color');
+}
+
+.box__cursor {
+	@each $val in $cursor-types {
+		&--#{$val} {
+			--#{$box-prefix}cursor: #{$val};
+		}
+	}
+}
+
+.box__display {
+	@each $val in $display-types {
+		&--#{$val} {
+			--#{$box-prefix}display: #{$val};
+		}
+	}
+}
+
+.box__height {
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}height: var(--#{$prefix}size-#{$val});
+		}
+	}
+}
+
+.box__left {
+	$pos-types: (
+		start: '0',
+		center: '50%',
+		end: '100%'
+	);
+
+	@each $key, $val in $pos-types {
+		&--#{$key} {
+			--#{$box-prefix}left: #{$val};
+		}
+	}
+}
+
+.box__m {
+	@each $val in $spacing-list {
+		&--#{$val} {
+			--#{$box-prefix}margin: var(--#{$prefix}spacing-#{$val});
+		}
+	}
+}
+
+.box__mb {
+	@each $val in $spacing-list {
+		&--#{$val} {
+			--#{$box-prefix}margin-bottom: var(--#{$prefix}spacing-#{$val});
+		}
+	}
+}
+
+.box__ml {
+	@each $val in $spacing-list {
+		&--#{$val} {
+			--#{$box-prefix}margin-left: var(--#{$prefix}spacing-#{$val});
+		}
+	}
+}
+
+.box__mr {
+	@each $val in $spacing-list {
+		&--#{$val} {
+			--#{$box-prefix}margin-right: var(--#{$prefix}spacing-#{$val});
+		}
+	}
+}
+
+.box__mt {
+	@each $val in $spacing-list {
+		&--#{$val} {
+			--#{$box-prefix}margin-top: var(--#{$prefix}spacing-#{$val});
+		}
+	}
+}
+
+.box__max-height {
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}max-height: var(--#{$prefix}size-#{$val});
+		}
+	}
+}
+
+.box__max-width {
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}max-width: var(--#{$prefix}size-#{$val});
+		}
+	}
+}
+
+.box__min-height {
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}min-height: var(--#{$prefix}size-#{$val});
+		}
+	}
+}
+
+.box__min-width {
+	@each $val in $size-list {
+		&--#{$val} {
+			--#{$box-prefix}min-width: var(--#{$prefix}size-#{$val});
+		}
+	}
+}
+
+.box__p {
+	@each $val in $spacing-list {
+		&--#{$val} {
+			--#{$box-prefix}padding: var(--#{$prefix}spacing-#{$val});
+		}
+	}
+}
+
+.box__pb {
+	@each $val in $spacing-list {
+		&--#{$val} {
+			--#{$box-prefix}padding-bottom: var(--#{$prefix}spacing-#{$val});
+		}
+	}
+}
+
+.box__pl {
+	@each $val in $spacing-list {
+		&--#{$val} {
+			--#{$box-prefix}padding-left: var(--#{$prefix}spacing-#{$val});
+		}
+	}
+}
+
+.box__pr {
+	@each $val in $spacing-list {
+		&--#{$val} {
+			--#{$box-prefix}padding-right: var(--#{$prefix}spacing-#{$val});
+		}
+	}
+}
+
+.box__pt {
+	@each $val in $spacing-list {
+		&--#{$val} {
+			--#{$box-prefix}padding-top: var(--#{$prefix}spacing-#{$val});
+		}
+	}
+}
+
+.box__pointer-events {
+	@each $val in $pointer-events-types {
+		&--#{$val} {
+			--#{$box-prefix}pointer-events: #{$val};
+		}
+	}
+}
+
+.box__position {
+	@each $val in $position-types {
+		&--#{$val} {
+			--#{$box-prefix}position: #{$val};
+		}
+	}
+}
+
+.box__right {
+	$pos-types: (
+		start: '0',
+		center: '50%',
+		end: '100%'
+	);
+
+	@each $key, $val in $pos-types {
+		&--#{$key} {
+			--#{$box-prefix}right: #{$val};
+		}
+	}
+}
+
+.box__top {
+	$pos-types: (
+		start: '0',
+		center: '50%',
+		end: '100%'
+	);
+
+	@each $key, $val in $pos-types {
+		&--#{$key} {
+			--#{$box-prefix}top: #{$val};
+		}
+	}
+}
+
+.box__translate-x {
+	&--center {
+		--#{$box-prefix}translate-x: -50%;
+	}
+}
+
+.box__translate-y {
+	&--center {
+		--#{$box-prefix}translate-y: -50%;
+	}
+}
+
+.box__width {
+	@each $size in $size-list {
+		&--#{$size} {
+			--#{$box-prefix}width: var(--#{$prefix}size-#{$size});
+		}
+	}
+}
+
+.box__z-index {
+	@each $val in $z-index-list {
+		&--#{$val} {
+			--#{$box-prefix}z-index: var(--#{$prefix}z-index-#{$val});
+		}
+	}
+}
