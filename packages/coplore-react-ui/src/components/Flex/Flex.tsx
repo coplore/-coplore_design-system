@@ -1,6 +1,7 @@
 import classNames from 'classnames';
-import { createElement, forwardRef } from 'react';
+import { forwardRef } from 'react';
 
+import Box from '../Box';
 import type { FlexProps } from './Flex.types';
 
 const Flex = forwardRef<HTMLElement, FlexProps>((props, ref) => {
@@ -14,7 +15,6 @@ const Flex = forwardRef<HTMLElement, FlexProps>((props, ref) => {
 		grow,
 		justify,
 		shrink,
-		style,
 		spacing,
 		wrap,
 		...rest
@@ -33,14 +33,11 @@ const Flex = forwardRef<HTMLElement, FlexProps>((props, ref) => {
 		classNameProp && classNameProp
 	);
 
-	const elementProps = {
-		...rest,
-		ref,
-		className,
-		style
-	};
-
-	return createElement(as, elementProps, children);
+	return (
+		<Box ref={ref} as={as} className={className} {...rest}>
+			{children}
+		</Box>
+	);
 });
 
 Flex.displayName = 'Flex';

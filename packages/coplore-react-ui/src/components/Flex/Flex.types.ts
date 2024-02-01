@@ -1,9 +1,9 @@
-import type { CSSProperties, DetailedHTMLProps, ElementType, HTMLAttributes } from 'react';
-import type { Spacing } from '../../models/foundation';
+import type { CSSProperties, ElementType } from 'react';
 
-type ExtendedType = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+import type { CoploreSpacing } from '../../types';
+import type { BoxProps } from '../Box';
 
-export type FlexProps = {
+export interface FlexProps extends BoxProps {
 	as?: ElementType;
 
 	/**
@@ -53,5 +53,5 @@ export type FlexProps = {
 	 * - spacing 단위로 설정이 가능합니다.
 	 * @default 0
 	 */
-	spacing?: Spacing;
-} & ExtendedType;
+	spacing?: CoploreSpacing;
+}
